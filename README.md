@@ -1,13 +1,5 @@
 # edison-nlmixr
 
-안녕하세요.
-
- 
-
-잘지내셨는지요? 요청하신 패키지가 완료되어 연락드립니다.
-
- 
-
 ## 실행
 
 - singlularity(도커와 비슷한 툴)를 활용하여 nrmixr이 설치된 컨테이너를 실행하면 됩니다.
@@ -22,41 +14,28 @@
 
 **run.sh 파일 설명**
 
-```r
+```bash
 #!/bin/bash
-
 # 입력파일이 한개인 경우, 아래와 같이 사용자가 생성한 입력 파일을 현재 디렉토리에 input.dat 로 저장
-
 cp $2 input.dat    
-
 # 입력 파일이 두개인 경우 아래 명령어 추가 
-
 # cp $4 input2.dat
 
- 
-
 # singularity 실행 
-
 singularity exec --bind $PWD:/mnt /SYSTEM_BULB/Singularity/images/nlmixr.sif Rscript -e 'source("./runscript.r", keep.source=TRUE, echo=TRUE)'
 
 # singularity exec : 컨테이너와 함께 특정 명령어를 실행 
-
 #  --bind $PWD:/mnt : 현재 경로($PWD)를 컨테이너 안 /mnt 폴더로 마운트 ( 현재 경로에 있는 파일들을 컨테이너 안에서 사용할 수 있도록 함)
-
 #  /SYSTEM_BULB/Singularity/images/nlmixr.sif : 컨테이너 경로
-
 # Rscript -e 'source("./runscript.r", keep.source=TRUE, echo=TRUE)' : 컨테이너에서 실행해야하는 명령어
 
- 
-
 #복사한 입력 파일 삭제
-
 rm -rf input.dat
 ```
 
 4. runscript.r  파일 생성 
 
-runscript.r 파일 설명 =====================================================================================================
+**runscript.r 파일 설명**
 
 ```r
 #!/usr/bin/env Rscript
