@@ -33,9 +33,9 @@ singularity exec --bind $PWD:/mnt /SYSTEM_BULB/Singularity/images/nlmixr.sif Rsc
 rm -rf input.dat
 ```
 
-4. runscript.r  파일 생성 
+4. runscript.R  파일 생성 
 
-**runscript.r 파일 설명**
+**runscript.R 파일 설명**
 
 ```r
 #!/usr/bin/env Rscript
@@ -89,7 +89,7 @@ close(fileOut)
 aa 10
 bb 20
 ```
- 
+
 6. 실행이 끝나면 result/output.txt 이 생성됩니다.
 
 보내주신 설치 url을 통해 컨테이너를 만들었으며, SnakeCharmR 는 python.h 문제로 설치가 되지 않아 reticulate을 대신 설치하였습니다.
@@ -102,4 +102,3 @@ ex)
 Rscript -e 'install.packages("RxODE")'
 Rscript -e 'install.packages("reticulate")'
 ```
- 
