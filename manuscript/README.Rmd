@@ -1,0 +1,36 @@
+EDISON
+
+nlmixr
+
+
+
+계량약리모델 라이브러리 홈페이지의 자료를 사용하였다.
+
+public data, KPML http://repository.kpml.or.kr/model/115 was used.
+upload the dataset.
+
+KPML을 불러와 nlmixr을 사용하는 R package 개발
+
+
+
+
+Nonlinear Mixed-Effects Model Development and Simulation Using nlmixr and Related R Open-Source Packages
+
+One compartment PK model of Alcohol
+Item	Details
+Model name	One compartment PK model of Alcohol
+Author name	Byungjeong Song
+Reference	None
+Drug	Alcohol
+Target Disease	None
+Objective	Development of PK model of Alochol (Korean Soju)
+Description	One compartment oral absorption with zero order
+Matching model and Reference	true
+Modification with Respect to publish model	true
+Modeling Dataset	human
+Data Description	Healthy Human
+files	
+
+- [PKdata_ver5.csv](http://repository.kpml.or.kr/file/133)
+- [run206.lst](http://repository.kpml.or.kr/file/134)
+- [run206.mod](http://repository.kpml.or.kr/file/135)
